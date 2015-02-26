@@ -1,9 +1,10 @@
 #!/bin/bash
 
 bash --version
-shopt -e errexit
-echo $?
+shopt -o errexit || echo $?
 set +e
-shopt -e errexit
+shopt -o errexit || echo $?
 (eval set -e)
-shopt -e errexit
+shopt -o errexit || echo $?
+(eval set +e)
+shopt -o errexit || echo $?
